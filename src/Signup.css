@@ -1,0 +1,188 @@
+/* src/signup.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #7d8491, #83a589);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.signup-container {
+  width: 400px; /* Match login width */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signup-container h2 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Signup Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Space for eye icon */
+  padding-left: 10px; /* Ensures text is not hidden under icon */
+}
+
+.password-wrapper .eye-icon {
+  position: absolute;
+  right: 10px; 
+  cursor: pointer;
+  font-size: 18px;
+  color: gray;
+  /* background: white; Ensures it doesn’t overlap with text */
+  padding: 5px;
+}
+
+/* Login Link */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.login-link a {
+  color: #00c6ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .signup-container {
+    width: 80%; /* Reduce width for tablets */
+    max-width: 350px;
+  }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    align-items: flex-start; /* Aligns content at the top for better UX */
+  }
+
+  .signup-container {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .signup-container h2 {
+    font-size: 22px; /* Reduce heading size */
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .login-link {
+    font-size: 12px;
+  }
+}
+
+/* Large Screens (Desktops & Ultra-Wide Displays) */
+@media (min-width: 1440px) {
+  .signup-container {
+    width: 500px; /* Expand width for large screens */
+    padding: 40px;
+  }
+
+  .signup-container h2 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}

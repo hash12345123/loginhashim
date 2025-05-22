@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, white,white);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.login-container {
+  width: 400px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #ff416c;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Forgot Password Form */
+.forgot-password-container {
+  display: none;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.forgot-password-container.active {
+  display: block;
+}
+
+.forgot-password-container h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.forgot-password-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.forgot-password-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top:20px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.forgot-password-container button:hover {
+  background: linear-gradient(45deg, #0cff1c, #ff416c);
+  transform: scale(1.05);
+}
+
+/* Login Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.signup-link a {
+  color: #ff416c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .login-container {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .login-container {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    font-size: 22px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .signup-link {
+    font-size: 12px;
+  }
+}
+
+/* Large Screens (Desktops & Ultra-Wide Displays) */
+@media (min-width: 1440px) {
+  .login-container {
+    width: 500px;
+    padding: 40px;
+  }
+
+  .login-container h2 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
