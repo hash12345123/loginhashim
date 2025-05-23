@@ -21,4 +21,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: tufailameen/reactapp:latest
+          tags: hashim2025/reactapp:latest
