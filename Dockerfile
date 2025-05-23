@@ -1,17 +1,13 @@
-# Use Node.js as the base image
-FROM node:latest
-
-# Create app directory
-WORKDIR /usr/src/app
-
-# Copy all files
+# Build stage
+FROM node:18 as build
+WORKDIR /app
+COPY package*.json ./
+RUN yarn install
 COPY . .
+RUN yarn build
 
-# Install dependencies
-RUN yarn install --cache-folder .yarn-cache
-
-# Expose the port the app runs on
-EXPOSE 5000
-
-# Command to run the application
-CMD ["yarn", "start"]
+# Production stage
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
