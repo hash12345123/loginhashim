@@ -1,7 +1,7 @@
 # Build stage
 FROM node:18 as build
 WORKDIR /app
-COPY package*.json ./
+COPY package.json yarn.lock* ./
 RUN yarn install
 COPY . .
 RUN yarn build
