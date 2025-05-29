@@ -14,7 +14,7 @@ body {
 .signup-container {
   width: 400px; /* Match login width */
   padding: 30px;
-  background: rgba(212, 9, 9, 0.949);
+  background: rgba(7, 255, 7, 0.949);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
